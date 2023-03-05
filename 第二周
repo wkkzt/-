@@ -17,4 +17,31 @@ for (int i = 0; i < m; i++) {
           已经是0就返回
           不是变成0
           在搜索周围
-          
+          }
+	  
+	  
+	  #include<set>//可以对存进去的数据去重
+	  stl库next_permutation函数的应用
+	  //最大公约数
+int gcd(int a, int b)
+{
+	if (b == 0) return a;
+	return gcd(b, a % b);
+}
+//最小公倍数
+int gac(int a, int b) {
+	if (a > b) {
+		int temp = a;
+		a = b;
+		b = temp;
+	}
+	int p = 1;
+	for (p = 1;; p++) {
+		if (a * p % b == 0) {
+			return a * p;
+		}
+	}
+}
+
+操作系统笔记：多线程，每个线程都是一个状态机，每个状态机执行一步后，换另外一个状态机去执行，实现多线程并发，然后就讲了多线程引起的问题，如果几个线程对同一个全局变量操作，就会相互干扰，运行就
+错误，现在有许多优化的方式来避免这样的错误
